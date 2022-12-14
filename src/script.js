@@ -73,3 +73,21 @@ document.getElementById("button").addEventListener("click", function (event) {
   data.first.value = "";
   data.second.value = "";
 });
+
+document
+  .getElementById("buttonLowerCase")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+
+    let firstValue = data.first.value.toLowerCase();
+    let secondValue = data.second.value.toLowerCase();
+
+    data.firstLine.innerHTML = compare(firstValue, secondValue)[0];
+    console.log(secondValue);
+    data.secondLine.innerHTML = compare(firstValue, secondValue)[1];
+    console.log(secondValue);
+    data.conclusion.innerHTML = compare(firstValue, secondValue)[2];
+
+    firstValue = "hi";
+    secondValue = "Hi";
+  });
